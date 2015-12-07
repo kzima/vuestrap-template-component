@@ -2090,13 +2090,13 @@
 /* 43 */
 /***/ function(module, exports) {
 
-	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">hello-world</span> <span class=\"hljs-attribute\">message</span>=<span class=\"hljs-value\">\"Hello World\"</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">bold</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">hello-world</span>&gt;</span>";
+	module.exports = "<span class=\"hljs-tag\">&lt;<span class=\"hljs-title\">hello-world</span> <span class=\"hljs-attribute\">size</span>=<span class=\"hljs-value\">\"md\"</span> <span class=\"hljs-attribute\">bold</span>&gt;</span>Hello World<span class=\"hljs-tag\">&lt;/<span class=\"hljs-title\">hello-world</span>&gt;</span>";
 
 /***/ },
 /* 44 */
 /***/ function(module, exports) {
 
-	module.exports = "<!-- demo component -->\r\n<docs-demo :meta=\"meta\" :snippet=\"snippet\" v-if=\"controls\">\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\" v-if=\"controls\">\r\n\t\t<label>\r\n\t\t\t<label>bold <input type=\"checkbox\" v-model=\"controls.bold\"></label>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tsize\r\n\t\t\t<select v-model=\"controls.size\">\r\n\t\t\t\t<option v-for=\"option in controls.sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\t\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<hello-world message=\"Hello World\" :bold=\"controls.bold\" :size=\"controls.size\"></hello-world>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n</docs-demo>";
+	module.exports = "<!-- demo component -->\r\n<docs-demo :meta=\"meta\" :snippet=\"snippet\" v-if=\"controls\">\r\n\t<!-- Html controls start-->\r\n\t<div slot=\"controls\" v-if=\"controls\">\r\n\t\t<label>\r\n\t\t\t<label>bold <input type=\"checkbox\" v-model=\"controls.bold\"></label>\r\n\t\t</label>\r\n\t\t<label>\r\n\t\t\tsize\r\n\t\t\t<select v-model=\"controls.size\">\r\n\t\t\t\t<option v-for=\"option in controls.sizes\" v-bind:value=\"option.value\">\r\n\t\t\t    {{ option.text }}\r\n\t\t\t  </option>\r\n\t\t\t</select>\r\n\t\t</label>\r\n\t</div>\r\n\t<!-- Html controls end-->\r\n\t\r\n\t<!-- Html markup start-->\r\n\t<div slot=\"markup\">\r\n\t\t<hello-world :bold=\"controls.bold\" :size=\"controls.size\">Hello World</hello-world>\r\n\t</div>\r\n\t<!-- Html markup end-->\r\n</docs-demo>";
 
 /***/ },
 /* 45 */
@@ -2121,7 +2121,7 @@
 		"options": [
 			{
 				"name": "bold",
-				"type": "String",
+				"type": "Boolean",
 				"default": "''",
 				"required": false,
 				"description": "Sets text to bold."
@@ -2263,7 +2263,7 @@
 /* 51 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"vuestrap-hello-world\">\r\n\t<p v-bind:class=\"{'text-bold': bold, 'text-sm': size == 'sm', 'text-lg': size == 'lg'}\">*** {{message}}! ***</p>\r\n</div>";
+	module.exports = "<div class=\"vuestrap-hello-world\">\r\n\t<p v-bind:class=\"{'text-bold': bold, 'text-sm': size == 'sm', 'text-lg': size == 'lg'}\">*** <slot></slot>! ***</p>\r\n</div>";
 
 /***/ },
 /* 52 */

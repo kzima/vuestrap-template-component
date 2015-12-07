@@ -123,7 +123,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 6 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"vuestrap-hello-world\">\r\n\t<p v-bind:class=\"{'text-bold': bold, 'text-sm': size == 'sm', 'text-lg': size == 'lg'}\">*** {{message}}! ***</p>\r\n</div>";
+	module.exports = "<div class=\"vuestrap-hello-world\">\r\n\t<p v-bind:class=\"{'text-bold': bold, 'text-sm': size == 'sm', 'text-lg': size == 'lg'}\">*** <slot></slot>! ***</p>\r\n</div>";
 
 /***/ }
 /******/ ])

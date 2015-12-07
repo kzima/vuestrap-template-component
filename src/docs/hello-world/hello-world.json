@@ -12,7 +12,7 @@
 	"options": [
 		{
 			"name": "bold",
-			"type": "String",
+			"type": "Boolean",
 			"default": "''",
 			"required": false,
 			"description": "Sets text to bold."
