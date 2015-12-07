@@ -1,8 +1,8 @@
 Vuestrap Icons Component
 =========
 
-Vuestrap Icons Component complements [vuestrap web components](http://kzima.github.io/vuestrap-base-components/#/) with svg icons.
-SVG sprite consists of 223 icons from Iconic — www.useiconic.com/open plus two custom ones: circle-fill and circle-outline
+Vuestrap Template Component helps with developing your custom web components with [Vuestrap](https://github.com/kzima/vuestrap#redame).
+It includes sample 'Hello World' component with some comments.
 
 DEMO
 =========
@@ -12,40 +12,48 @@ DEMO
 QUICK USE
 =========
 
-For compiled components, use it within your Vue instance like this:
+**Bower:**
 
-```js
-new Vue({
-	el: '#app',
-	components: { 'icon': vuestrapIcons.icons }
-})
-```
+ - `bower install vuestrap-hello-world`
+ - add script in your html document:
+ ```js
+ <script src="bower_components/vuestrap-hello-world/dist/vuestrapHelloWorld.min.js"></script>
+ ```
+ - use it within your Vue instance like this:
 
--- OR --
+  ```js
+  new Vue({
+  	el: '#app',
+  	components: { 'hello-world': vuestrapHelloWorld.helloWorld }
+  })
+  ```
 
-If you chosen to work with source components, just import* desired component like so:
 
-```js
-import icons from 'vuestrap-icons/src/components/icons'
-```
+**From source:**
 
-and then load it in your Vue instance:
+ - `npm install vuestrap-hello-world`
+ - import* desired component like so:
 
-```js
-new Vue({
-	el: '#app',
-	components: { 'icon': icons }
-})
-```
+  ```js
+  import helloWorld from 'vuestrap-hello-world/src/components/hello-world'
+  ```
 
-*Note: You will need <a href="https://github.com/babel/babel-loader">Babel Loader</a> in your Webpack config file to support ES6 syntax.
+ - load it in your Vue instance:
+
+  ```js
+  new Vue({
+  	el: '#app',
+  	components: { 'hello-world': helloWorld }
+  })
+  ```
+
+  *Note: You will need <a href="https://github.com/babel/babel-loader">Babel Loader</a> in your Webpack config file to support ES6 syntax.
 
 You can then use icon component in your html, like so:
 ```html
-<icon name="cog"></icon>
+<hello-world>Hello World</hello-world>
 ```
 
 TODO
 =========
-- create html page with list of icons
 - testing

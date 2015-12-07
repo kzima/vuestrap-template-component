@@ -12,6 +12,7 @@ export default {
 			pkg: this.$parent.pkg,
 			componentNameCamelCase: 'helloWorld',
 			componentName: 'hello-world',
+			componentNameSurfixed: 'hello-world'
 		}
 	},
   template: template,

@@ -6,21 +6,21 @@ import 'vuestrap/core'
 
 // import external dependencies
 // docs component handles routing and demo pages
-import docs from 'vuestrap-docs/src/components/docs'
+import docsPages from 'vuestrap-docs/src/components/docs'
 
 // import demo pages compatibile with docs component
-import docsPages from 'src/docs'
+import docsRoutes from 'src/docs'
 
 // import utils
 import {getRoutes} from 'utils'
 
 
 // get list of the route objects
-const routes = getRoutes(docsPages)
+const routes = getRoutes(docsRoutes)
 
 // create components from routes and attach it to the docs.components object
 routes.forEach((route) => {
-	docs.components[route.id] = route.component
+	docsPages.components[route.id] = route.component
 })
 
 // start docs instance
@@ -30,7 +30,7 @@ window.docs = new Vue({
 		routes: routes,
 	},
 	components: {
-		docs,
+		docsPages,
 	},
 })
 
