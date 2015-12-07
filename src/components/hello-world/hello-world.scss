@@ -1,0 +1,21 @@
+// variables
+$vuestrap-hello-world-color: #000 !default;
+$vuestrap-hello-world-font-sm: 0.6em;
+$vuestrap-hello-world-font-lg: 1.6em;
+
+// namsepaced component class
+.vuestrap-hello-world {
+    p {
+        color: $vuestrap-hello-world-color;
+        font-size: 1em;
+        &.text-bold {
+            font-weight: bold;
+        }
+        &.text-sm {
+            font-size: $vuestrap-hello-world-font-sm;
+        }
+        &.text-lg {
+            font-size: $vuestrap-hello-world-font-lg;
+        }
+    }
+}

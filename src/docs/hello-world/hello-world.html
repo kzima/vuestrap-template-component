@@ -1,0 +1,24 @@
+<!-- demo component -->
+<docs-demo :meta="meta" :snippet="snippet" v-if="controls">
+	<!-- Html controls start-->
+	<div slot="controls" v-if="controls">
+		<label>
+			<label>bold <input type="checkbox" v-model="controls.bold"></label>
+		</label>
+		<label>
+			size
+			<select v-model="controls.size">
+				<option v-for="option in controls.sizes" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+	</div>
+	<!-- Html controls end-->
+	
+	<!-- Html markup start-->
+	<div slot="markup">
+		<hello-world message="Hello World" :bold="controls.bold" :size="controls.size"></hello-world>
+	</div>
+	<!-- Html markup end-->
+</docs-demo>

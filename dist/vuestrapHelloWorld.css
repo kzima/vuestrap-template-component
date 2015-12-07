@@ -1,0 +1,11 @@
+.vuestrap-hello-world p {
+  color: #000;
+  font-size: 1em; }
+  .vuestrap-hello-world p.text-bold {
+    font-weight: bold; }
+  .vuestrap-hello-world p.text-sm {
+    font-size: 0.6em; }
+  .vuestrap-hello-world p.text-lg {
+    font-size: 1.6em; }
+
+/*# sourceMappingURL=vuestrapHelloWorld.css.map*/

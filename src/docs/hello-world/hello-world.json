@@ -1,0 +1,28 @@
+{
+	"name": "hello",
+	"title": "Hello World",
+	"description": "Replace me with your own component.",
+	"accessibility": "Some accessibility info goes here.",
+	"dependencies": ["vuestrap/core/spinner"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["*IE9+", "*Android 4.3"],
+		"note": "* It works in every IE version and mobile."
+	},
+	"options": [
+		{
+			"name": "bold",
+			"type": "String",
+			"default": "''",
+			"required": false,
+			"description": "Sets text to bold."
+		},
+		{
+			"name": "size",
+			"type": "String",
+			"values": ["sm","md","lg"],
+			"default": "md",
+			"description": "Size of the text."
+		}
+	]
+}

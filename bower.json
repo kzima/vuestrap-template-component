@@ -1,0 +1,39 @@
+{
+  "name": "vuestrap-helloWorld",
+  "description": "Vuestrap Hello World Component template - a boilerplate to write custom components with Vuestrap.",
+  "homepage": "https://github.com/kzima/vuestrap-helloWorld",
+  "authors": [
+    "kzima <kris@mosquito.ie>"
+  ],
+  "main": [
+    "dist/vuestrap-helloWorld.js",
+    "dist/vuestrap-helloWorld.js.map",
+    "dist/vuestrap-helloWorld.min.js",
+    "dist/vuestrap-helloWorld.css",
+    "dist/vuestrap-helloWorld.css.map",
+    "dist/vuestrap-helloWorld.min.css"
+  ],
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "bootstrap4",
+    "vuestrap",
+    "vue-components",
+    "web-components"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "assets/*",
+    "node_modules",
+    "bower_components",
+    "docs",
+    "src",
+    "build",
+    "gulpfile.js",
+    "index.html",
+    "webpack*.js",
+    "utils"
+  ]
+}
