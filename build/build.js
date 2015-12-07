@@ -1860,7 +1860,7 @@
 		"library": "vuestrapHelloWorld",
 		"repository": {
 			"type": "git",
-			"url": "git+https://github.com/kzima/vuestrap-component-template.git"
+			"url": "git+https://github.com/kzima/vuestrap-template-component.git"
 		},
 		"scripts": {
 			"dev": "webpack -w --colors --progress --config webpack.build.js --env dev",
@@ -1880,7 +1880,7 @@
 		},
 		"license": "MIT",
 		"bugs": {
-			"url": "https://github.com/kzima/vuestrap-component-template/issues"
+			"url": "https://github.com/kzima/vuestrap-template-component/issues"
 		},
 		"dependencies": {
 			"vue": "^1.0.10"
@@ -1906,7 +1906,7 @@
 			"webpack": "^1.12.9",
 			"webpack-dev-server": "^1.12.1"
 		},
-		"homepage": "https://github.com/kzima/vuestrap-component-template#readme"
+		"homepage": "https://github.com/kzima/vuestrap-template-component#readme"
 	};
 
 /***/ },
@@ -1974,7 +1974,7 @@
 /* 38 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"jumbotron\">\r\n  <h1>{{pkg.name}} <span class=\"label label-success\">{{pkg.version}}</span></h1>\r\n  <p>{{pkg.description}}</p>\r\n</div>\r\n<h2>Installation</h2>\r\n<div class=\"row\">\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Compiled</h3>\r\n    <p>Minified CSS and JavaScript with no  documentation or original source files.</p>\r\n    <code>bower install {{pkg.name}} --save-dev</code>\r\n\t</div>\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Source</h3>\r\n    <p>Source Sass, JavaScript, and documentation files.</p>\r\n    <code>npm install {{pkg.name}} --save-dev</code>\r\n   </div>\r\n</div>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Usage</h2>\r\n<p>For compiled components, use it within your Vue instance like this:</p>\r\n<p><code>new Vue({ components: { '{{componentName}}': {{pkg.library}}.{{componentNameCamelCase}} }})</code></p>\r\n\r\n<div class=\"m-b\"></div>\r\n<strong>OR</strong>\r\n<div class=\"m-b\"></div>\r\n\r\n<p>If you chosen to work with source components, just import* desired component like so:</p>\r\n<p><code>import {{componentNameCamelCase}} from '{{pkg.name}}/src/components/{{componentName}}'</code></p>\r\n<p>and then load it in your Vue instance:</p>\r\n<p><code>new Vue({ components: { {{componentNameCamelCase}} })</code></p>\r\n<p>*Note: You will need <a href=\"https://github.com/babel/babel-loader\">Babel Loader</a> in your Webpack config file to support ES6 syntax.</p>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Examples</h2>\r\n<ul>\r\n  <li><a href=\"/examples/hello.html\" target=\"_blank\">Basic Hello World example.</a></li>\r\n</ul>";
+	module.exports = "<div class=\"jumbotron\">\r\n  <h1>{{pkg.name}} <span class=\"label label-success\">{{pkg.version}}</span></h1>\r\n  <p>{{pkg.description}}</p>\r\n</div>\r\n<h2>Installation</h2>\r\n<div class=\"row\">\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Compiled</h3>\r\n    <p>Minified CSS and JavaScript with no  documentation or original source files.</p>\r\n    <code>bower install {{pkg.name}} --save-dev</code>\r\n\t</div>\r\n\t<div class=\"col-xs-12 col-sm-6\">\r\n    <h3>Source</h3>\r\n    <p>Source Sass, JavaScript, and documentation files.</p>\r\n    <code>npm install {{pkg.name}} --save-dev</code>\r\n   </div>\r\n</div>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Usage</h2>\r\n<p>For compiled components, use it within your Vue instance like this:</p>\r\n<p><code>new Vue({ components: { '{{componentName}}': {{pkg.library}}.{{componentNameCamelCase}} }})</code></p>\r\n\r\n<div class=\"m-b\"></div>\r\n<strong>OR</strong>\r\n<div class=\"m-b\"></div>\r\n\r\n<p>If you chosen to work with source components, just import* desired component like so:</p>\r\n<p><code>import {{componentNameCamelCase}} from '{{pkg.name}}/src/components/{{componentName}}'</code></p>\r\n<p>and then load it in your Vue instance:</p>\r\n<p><code>new Vue({ components: { {{componentNameCamelCase}} }})</code></p>\r\n<p>*Note: You will need <a href=\"https://github.com/babel/babel-loader\">Babel Loader</a> in your Webpack config file to support ES6 syntax.</p>\r\n\r\n<div class=\"m-b-lg\"></div>\r\n<h2>Examples</h2>\r\n<ul>\r\n  <li><a href=\"examples/hello.html\" target=\"_blank\">Basic Hello World example.</a></li>\r\n</ul>";
 
 /***/ },
 /* 39 */

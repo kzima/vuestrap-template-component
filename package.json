@@ -5,7 +5,7 @@
   "library": "vuestrapHelloWorld",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kzima/vuestrap-component-template.git"
+    "url": "git+https://github.com/kzima/vuestrap-template-component.git"
   },
   "scripts": {
     "dev": "webpack -w --colors --progress --config webpack.build.js --env dev",
@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kzima/vuestrap-component-template/issues"
+    "url": "https://github.com/kzima/vuestrap-template-component/issues"
   },
   "dependencies": {
     "vue": "^1.0.10"
@@ -51,5 +51,5 @@
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.12.1"
   },
-  "homepage": "https://github.com/kzima/vuestrap-component-template#readme"
+  "homepage": "https://github.com/kzima/vuestrap-template-component#readme"
 }
