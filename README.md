@@ -1,4 +1,4 @@
-Vuestrap Template Component Component
+Vuestrap Template Component
 =========
 
 Vuestrap Template Component helps with developing your custom web components using [Vuestrap](https://github.com/kzima/vuestrap#redame).
