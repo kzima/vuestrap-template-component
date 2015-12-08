@@ -1,7 +1,7 @@
-Vuestrap Icons Component
+Vuestrap Template Component Component
 =========
 
-Vuestrap Template Component helps with developing your custom web components with [Vuestrap](https://github.com/kzima/vuestrap#redame).
+Vuestrap Template Component helps with developing your custom web components using [Vuestrap](https://github.com/kzima/vuestrap#redame).
 It includes sample 'Hello World' component with some comments.
 
 DEMO
