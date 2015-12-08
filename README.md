@@ -7,7 +7,7 @@ It includes sample 'Hello World' component with some comments.
 DEMO
 =========
 
-[Documentation](http://kzima.github.io/vuestrap-icons/#/icons)
+[Documentation](http://kzima.github.io/vuestrap-template-component/#/hello-world)
 
 QUICK USE
 =========
@@ -49,7 +49,7 @@ QUICK USE
 
   *Note: You will need <a href="https://github.com/babel/babel-loader">Babel Loader</a> in your Webpack config file to support ES6 syntax.
 
-You can then use icon component in your html, like so:
+You can then use this component in your html, like so:
 ```html
 <hello-world>Hello World</hello-world>
 ```
