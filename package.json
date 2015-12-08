@@ -1,6 +1,6 @@
 {
   "name": "vuestrap-hello-world",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vuestrap Hello World Component template - a boilerplate to write custom components with Vuestrap.",
   "library": "vuestrapHelloWorld",
   "repository": {
@@ -46,7 +46,7 @@
     "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
     "vuestrap": "^1.0.0",
-    "vuestrap-docs": "^0.2.0",
+    "vuestrap-docs": "^0.2.1",
     "vuestrap-theme-loader": "^0.1.2",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.12.1"

@@ -61,18 +61,18 @@
 
 	var _vuestrapDocsSrcComponentsDocs2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDocs);
 
+	// import utils
+
+	var _vuestrapDocsUtils = __webpack_require__(33);
+
 	// import demo pages compatibile with docs component
 
 	var _srcDocs = __webpack_require__(36);
 
 	var _srcDocs2 = _interopRequireDefault(_srcDocs);
 
-	// import utils
-
-	var _utils = __webpack_require__(33);
-
 	// get list of the route objects
-	var routes = (0, _utils.getRoutes)(_srcDocs2['default']);
+	var routes = (0, _vuestrapDocsUtils.getRoutes)(_srcDocs2['default']);
 
 	// create components from routes and attach it to the docs.components object
 	routes.forEach(function (route) {
@@ -83,7 +83,8 @@
 	window.docs = new Vue({
 		el: '#docs',
 		data: {
-			routes: routes
+			routes: routes,
+			pageTitle: 'Vuestrap Docs'
 		},
 		components: {
 			docsPages: _vuestrapDocsSrcComponentsDocs2['default']
@@ -504,6 +505,10 @@
 	    props: {
 	        routes: {
 	            type: Array,
+	            required: true
+	        },
+	        pageTitle: {
+	            type: String,
 	            required: true
 	        }
 	    },
@@ -1088,22 +1093,7 @@
 	  extractRoutes(arr);
 	  return routes;
 	};
-
 	exports.getRoutes = getRoutes;
-	/**
-	 * Some common stuff used in demo pages
-	 */
-	var sizes = [{
-	  text: 'sm',
-	  value: 'sm'
-	}, {
-	  text: 'md',
-	  value: 'md'
-	}, {
-	  text: 'lg',
-	  value: 'lg'
-	}];
-	exports.sizes = sizes;
 
 /***/ },
 /* 34 */
@@ -1855,7 +1845,7 @@
 
 	module.exports = {
 		"name": "vuestrap-hello-world",
-		"version": "0.1.0",
+		"version": "0.1.1",
 		"description": "Vuestrap Hello World Component template - a boilerplate to write custom components with Vuestrap.",
 		"library": "vuestrapHelloWorld",
 		"repository": {
@@ -1901,7 +1891,7 @@
 			"sass-loader": "^3.1.1",
 			"style-loader": "^0.13.0",
 			"vuestrap": "^1.0.0",
-			"vuestrap-docs": "^0.2.0",
+			"vuestrap-docs": "^0.2.1",
 			"vuestrap-theme-loader": "^0.1.2",
 			"webpack": "^1.12.9",
 			"webpack-dev-server": "^1.12.1"
@@ -2052,13 +2042,13 @@
 
 	__webpack_require__(46);
 
-	var _utils = __webpack_require__(33);
+	var _utils = __webpack_require__(48);
 
-	var _srcComponentsHelloWorld = __webpack_require__(48);
+	var _srcComponentsHelloWorld = __webpack_require__(49);
 
 	var _srcComponentsHelloWorld2 = _interopRequireDefault(_srcComponentsHelloWorld);
 
-	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(52);
+	var _vuestrapDocsSrcComponentsDemo = __webpack_require__(53);
 
 	var _vuestrapDocsSrcComponentsDemo2 = _interopRequireDefault(_vuestrapDocsSrcComponentsDemo);
 
@@ -2183,6 +2173,30 @@
 
 /***/ },
 /* 48 */
+/***/ function(module, exports) {
+
+	/**
+	 * Some common stuff used in demo pages
+	 */
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	var sizes = [{
+	  text: 'sm',
+	  value: 'sm'
+	}, {
+	  text: 'md',
+	  value: 'md'
+	}, {
+	  text: 'lg',
+	  value: 'lg'
+	}];
+	exports.sizes = sizes;
+
+/***/ },
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2194,9 +2208,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(49);
+	__webpack_require__(50);
 
-	var _helloWorldHtml = __webpack_require__(51);
+	var _helloWorldHtml = __webpack_require__(52);
 
 	var _helloWorldHtml2 = _interopRequireDefault(_helloWorldHtml);
 
@@ -2221,13 +2235,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(50);
+	var content = __webpack_require__(51);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2247,7 +2261,7 @@
 	}
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2261,13 +2275,13 @@
 
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"vuestrap-hello-world\">\r\n\t<p v-bind:class=\"{'text-bold': bold, 'text-sm': size == 'sm', 'text-lg': size == 'lg'}\">*** <slot></slot>! ***</p>\r\n</div>";
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// import dependencies
@@ -2279,15 +2293,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(53);
+	__webpack_require__(54);
 
-	var _demoHtml = __webpack_require__(55);
+	var _demoHtml = __webpack_require__(56);
 
 	var _demoHtml2 = _interopRequireDefault(_demoHtml);
 
-	__webpack_require__(56);
-
 	__webpack_require__(57);
+
+	__webpack_require__(58);
 
 	// export component object
 	exports['default'] = {
@@ -2309,13 +2323,13 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(54);
+	var content = __webpack_require__(55);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2335,7 +2349,7 @@
 	}
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
@@ -2349,19 +2363,10 @@
 
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = "<section class=\"vuestrap-docs-demo\" id=\"{{meta.name}}\">\r\n\r\n\t<!-- Meta title -->\r\n\t<h2>{{meta.title}}</h2>\r\n\t<p v-html=\"meta.description\"></p>\r\n\r\n\t<div class=\"m-b\"></div>\r\n\r\n\t<div class=\"alert alert-info\" role=\"alert\" v-if=\"meta.note\">\r\n  \t<icon background=\"circle-outline\" size=\"sm\" variant=\"info\" text=\"i\"></icon> <span v-html=\"meta.note\"></span>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Component manipulators -->\r\n\t<slot name=\"controls\"></slot>\r\n\r\n\t<!-- Output & Code sample -->\r\n\t<div class=\"code-demo\">\r\n\r\n\t\t<slot class=\"markup\" name=\"markup\"></slot>\r\n\r\n\t\t<div class=\"highlight\">\r\n\t\t\t<pre><code v-html=\"snippet\"></code></pre>\r\n\t\t</div>\r\n\t</div>\r\n\r\n\t<!-- Options -->\r\n\t<div class=\"options\" v-if=\"meta.options.length\">\r\n\t\t<h3>Options</h3>\r\n\t\t<table class='table table-responsive'>\r\n\t\t\t<tr>\r\n\t\t\t\t<th>Name</th>\r\n\t\t\t\t<th>Type</th>\r\n\t\t\t\t<th>Default</th>\r\n\t\t\t\t<th>Required</th>\r\n\t\t\t\t<th>Description</th>\r\n\t\t\t</tr>\r\n\t\t\t<tr v-for=\"item in meta.options\">\r\n\t\t\t\t<td>{{item.name}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<code v-html=\"item.type\"></code>\r\n\t\t\t\t</td>\r\n\t\t\t\t<td><code v-if=\"item.default\" v-html=\"item.default\"></code></td>\r\n\t\t\t\t<td>{{item.required == true ? 'yes' : ''}}</td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<p v-html=\"item.description\"></p>\r\n\t\t\t\t\t<p v-if=\"item.values\">\r\n\t\t\t\t\t\tPosible values:\r\n\t\t\t\t\t\t<code v-for=\"item in item.values\">{{item}}</code>\r\n\t\t\t\t\t</p>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t\t</table>\t\r\n\t</div>\r\n\r\n\t<!-- Accessibility -->\r\n\t<div class=\"accessibility\" v-if=\"meta.accessibility\">\r\n\t\t<h3>Accessibility</h3>\r\n\t\t<p v-html=\"meta.accessibility\"></p>\r\n\t</div>\r\n\r\n\t<div class=\"m-b-md\"></div>\r\n\r\n\t<!-- Browser Support -->\r\n\t<div class=\"browserSupport\" v-if=\"meta.browserSupport\">\r\n\t\t<h3>Browser Support</h3>\r\n\t\t<span class=\"label label-primary\" v-for=\"item in meta.browserSupport.browsers\">{{ item }}</span>\r\n\t\t<p><small v-html=\"meta.browserSupport.note\"></small></p>\r\n\t</div>\r\n</section>\r\n";
-
-/***/ },
-/* 56 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// import dependencies
-	'use strict';
-
-	__webpack_require__(28);
 
 /***/ },
 /* 57 */
@@ -2370,18 +2375,27 @@
 	// import dependencies
 	'use strict';
 
-	__webpack_require__(58);
-
-	__webpack_require__(16);
+	__webpack_require__(28);
 
 /***/ },
 /* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// import dependencies
+	'use strict';
+
+	__webpack_require__(59);
+
+	__webpack_require__(16);
+
+/***/ },
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(59);
+	var content = __webpack_require__(60);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(5)(content, {});
@@ -2401,7 +2415,7 @@
 	}
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
